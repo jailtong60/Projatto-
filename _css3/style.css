@@ -1,0 +1,839 @@
+/* ========================= RESET ========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #0f0f0f;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* ========================= HEADER PREMIUM V2 ========================= */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(10, 10, 10, 0.75);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+header.scrolled {
+    background: rgba(10, 10, 10, 0.95);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* CONTAINER */
+.cabeca {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 60px;
+    max-width: 1350px;
+    margin: 0 auto;
+}
+
+/* ========================= LOGOS MAIORES ========================= */
+.logo img {
+    height: 55px; /* maior */
+    transition: 0.3s ease;
+}
+
+.iso img {
+    height: 48px; /* proporcional à logo principal */
+    opacity: 0.85;
+    transition: 0.3s ease;
+}
+
+.logo img:hover,
+.iso img:hover {
+    transform: scale(1.06);
+    opacity: 1;
+}
+
+/* ========================= MENU PADRÃO BONITO ========================= */
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 28px; /* espaçamento mais elegante */
+}
+
+.menu a {
+    position: relative;
+    color: #d0d0d0;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.6px;
+    padding: 6px 0;
+    transition: 0.25s ease;
+}
+
+/* linha animada */
+.menu a::after {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: linear-gradient(90deg, #00c2ff, #00e0ff);
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+.menu a:hover {
+    color: #ffffff;
+}
+
+.menu a:hover::after {
+    width: 100%;
+}
+
+/* LINK ATIVO (adicione class="ativo" no HTML) */
+.menu a.ativo {
+    color: #fff;
+}
+
+.menu a.ativo::after {
+    width: 100%;
+}
+
+/* BOTÃO CTA (último item) */
+.menu a:last-child {
+    background: linear-gradient(135deg, #00c2ff, #00e0ff);
+    color: #000;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.menu a:last-child::after {
+    display: none;
+}
+
+.menu a:last-child:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0,194,255,0.4);
+}
+
+/* ========================= RESPONSIVO BÁSICO ========================= */
+@media (max-width: 900px) {
+    .cabeca {
+        padding: 10px 20px;
+    }
+
+    .menu {
+        gap: 16px;
+    }
+
+    .logo img {
+        height: 45px;
+    }
+
+    .iso img {
+        height: 38px;
+    }
+}
+
+/* ========================= INÍCIO (COM FUNDO) ========================= */
+.inicio {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 80px 10px;
+    background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+    url("https://img.freepik.com/fotos-gratis/trabalhador-da-industria-metalurgica-pulveriza-traje-de-protecao-a-noite-gerado-por-ia_188544-47424.jpg") center/cover no-repeat;
+}
+
+.inicio .conteudo {
+    max-width: 700px;
+}
+
+.inicio h1 {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.subtitulo {
+    font-size: 30px;
+    color: #00c2ff;
+    margin-bottom: 10px;
+}
+
+.descricao {
+    font-size: 20px;
+    opacity: 0.85;
+    margin-bottom: 20px;
+}
+
+.beneficios span {
+    display: inline-block;
+    margin-right: 15px;
+    background: rgba(0,194,255,0.15);
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 20px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 20px;
+    background: #00c2ff;
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #0099cc;
+}
+
+/* ========================= SERVIÇOS ========================= */
+#servicos {
+    padding: 100px 60px;
+    background: linear-gradient(180deg, #0f0f0f, #0a0a0a);
+}
+
+/* Título principal */
+#servicos h1 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2.4rem;
+    background: linear-gradient(90deg, #00c2ff, #00ffae);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 1px;
+}
+
+/* GRID */
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+/* CARDS */
+.container .item {
+    background: rgba(22, 22, 22, 0.85);
+    backdrop-filter: blur(8px);
+    padding: 25px;
+    border-radius: 16px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255,255,255,0.05);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+    position: relative;
+    overflow: hidden;
+}
+
+/* efeito de brilho sutil */
+.container .item::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, transparent, rgba(0,194,255,0.08), transparent);
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.container .item:hover::before {
+    opacity: 1;
+}
+
+.container .item:hover {
+    transform: translateY(-10px) scale(1.01);
+    border: 1px solid #00c2ff;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.7);
+}
+
+/* TÍTULO DO CARD */
+.container h2 {
+    color: #00c2ff;
+    margin-bottom: 12px;
+    font-size: 1.3rem;
+}
+
+/* TEXTO */
+.container .resumo {
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+    opacity: 0.85;
+    line-height: 1.5;
+}
+
+/* LISTA */
+.container ul {
+    margin: 12px 0;
+    padding-left: 18px;
+}
+
+.container ul li {
+    margin-bottom: 6px;
+    opacity: 0.8;
+    font-size: 0.9rem;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    #servicos {
+        padding: 70px 20px;
+    }
+
+    #servicos h1 {
+        font-size: 1.8rem;
+    }
+}
+
+/* ========================= PROCESSO ========================= */
+#processo {
+    padding: 100px 60px;
+    background: linear-gradient(180deg, #0c0c0c, #080808);
+}
+
+/* TÍTULO PRINCIPAL */
+#processo h1 {
+    text-align: center;
+    margin-bottom: 60px;
+    font-size: 2.4rem;
+    background: linear-gradient(90deg, #00c2ff, #00ffae);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* CONTAINER */
+.processo {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* CARDS */
+.processo .etapa {
+    background: rgba(22, 22, 22, 0.85);
+    backdrop-filter: blur(8px);
+    padding: 30px 25px;
+    border-radius: 16px;
+    width: 270px;
+    text-align: center;
+    transition: all 0.35s ease;
+    border: 1px solid rgba(255,255,255,0.05);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    position: relative;
+    overflow: hidden;
+}
+
+/* brilho sutil */
+.processo .etapa::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, transparent, rgba(0,194,255,0.08), transparent);
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.processo .etapa:hover::before {
+    opacity: 1;
+}
+
+.processo .etapa:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.7);
+}
+
+/* NÚMERO (01, 02, 03) */
+.processo h3 {
+    font-size: 2rem;
+    margin-bottom: 5px;
+    color: rgba(0,194,255,0.2);
+}
+
+/* TÍTULO */
+.processo h2 {
+    color: #00c2ff;
+    margin-bottom: 8px;
+    font-size: 1.3rem;
+}
+
+/* SUBTÍTULO */
+.processo h4 {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    opacity: 0.7;
+    letter-spacing: 0.5px;
+}
+
+/* TEXTO */
+.processo p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    opacity: 0.85;
+    margin-bottom: 10px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    #processo {
+        padding: 70px 20px;
+    }
+
+    #processo h1 {
+        font-size: 1.8rem;
+    }
+}
+
+/* ========================= EMPRESA ========================= */
+#empresa {
+    padding: 110px 70px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 35px;
+    background: linear-gradient(180deg, #0f0f0f, #0a0a0a);
+    position: relative;
+}
+
+/* leve efeito de luz no fundo */
+#empresa::before {
+    content: "";
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(0,194,255,0.15), transparent 70%);
+    filter: blur(60px);
+    z-index: 0;
+}
+
+/* Caixa refinada */
+.box {
+    background: rgba(22, 22, 22, 0.75);
+    backdrop-filter: blur(12px);
+    padding: 35px;
+    border-radius: 18px;
+    border: 1px solid rgba(255,255,255,0.06);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+    transition: all 0.35s ease;
+    position: relative;
+    z-index: 1;
+}
+
+/* brilho sutil animado */
+.box::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 18px;
+    background: linear-gradient(120deg, transparent, rgba(0,194,255,0.08), transparent);
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.box:hover::after {
+    opacity: 1;
+}
+
+.box:hover {
+    transform: translateY(-6px) scale(1.01);
+    box-shadow: 0 25px 60px rgba(0,0,0,0.8);
+}
+
+/* Título */
+#caixa1 h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 2.4rem;
+    background: linear-gradient(90deg, #00c2ff, #00ffae);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 1px;
+}
+
+/* Texto (AJUSTE IMPORTANTE 👇) */
+#caixa1 p {
+    margin-bottom: 14px;
+    opacity: 0.85;
+    line-height: 1.7;
+    font-size: 1.09rem; /* ↓ antes estava muito grande */
+    color: #dcdcdc;
+}
+
+/* destaque em palavras */
+#caixa1 p strong {
+    color: #00c2ff;
+    font-weight: 600;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    #empresa {
+        grid-template-columns: 1fr;
+        padding: 70px 20px;
+    }
+
+    #caixa1 h1 {
+        font-size: 1.8rem;
+    }
+}
+
+/* ========================= CERTIFICADO (ZOOM) ========================= */
+#caixa2 {
+    text-align: center;
+}
+
+/* Título mais moderno */
+#caixa2 h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    background: linear-gradient(90deg, #00c2ff, #00ffae);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 1px;
+}
+
+/* Texto mais suave e legível */
+#caixa2 p {
+    font-size: 1.05rem;
+    opacity: 0.8;
+    line-height: 1.5;
+    max-width: 90%;
+    margin: 0 auto 15px auto;
+}
+
+/* IMAGEM (mantido, só dei um polimento leve) */
+#caixa2 img {
+    width: 80%;
+    margin-top: 15px;
+    border-radius: 10px;
+    transition: 0.4s;
+    cursor: zoom-in;
+}
+
+#caixa2 img:hover {
+    transform: scale(0.9);
+    box-shadow: 0 15px 30px rgba(0,194,255,0.3);
+}
+
+/* ========================= GALERIA ========================= */
+.galeria-lightbox {
+    padding: 60px 0;
+}
+
+.track {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding: 80px;
+}
+
+.item img {
+    width: 250px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.item img:hover {
+    transform: scale(1.05);
+}
+
+/* ========================= Blog ========================= */
+#blog {
+    padding: 180px 60px;
+    background: linear-gradient(180deg, #0c0c0c, #080808);
+}
+
+/* TÍTULO */
+#blog h1 {
+    text-align: center;
+    margin-bottom: 60px;
+    font-size: 2.4rem;
+    background: linear-gradient(90deg, #00c2ff, #00ffae);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* GRID */
+.blog-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+/* CARD */
+.post {
+    background: rgba(22, 22, 22, 0.85);
+    backdrop-filter: blur(8px);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.35s ease;
+    border: 1px solid rgba(255,255,255,0.05);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+    position: relative;
+}
+
+/* brilho sutil */
+.post::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, transparent, rgba(0,194,255,0.08), transparent);
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.post:hover::before {
+    opacity: 1;
+}
+
+.post:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.7);
+}
+
+/* IMAGEM */
+.post img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    transition: 0.4s;
+}
+
+.post:hover img {
+    transform: scale(1.08);
+}
+
+/* CONTEÚDO */
+.post h2 {
+    font-size: 1.2rem;
+    color: #00c2ff;
+    margin: 15px 15px 10px 15px;
+}
+
+.post p {
+    font-size: 0.9rem;
+    opacity: 0.85;
+    line-height: 1.5;
+    margin: 0 15px 15px 15px;
+}
+
+/* BOTÃO */
+.post a {
+    display: inline-block;
+    margin: 0 15px 20px 15px;
+    padding: 8px 15px;
+    font-size: 0.85rem;
+    color: #00c2ff;
+    border: 1px solid #00c2ff;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.post a:hover {
+    background: #00c2ff;
+    color: #000;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    #blog {
+        padding:    70px 20px;
+    }
+
+    #blog h1 {
+        font-size: 1.8rem;
+    }
+}
+/* ========================= CONTATO ========================= */
+#contato {
+    padding: 120px 20px;
+    background: radial-gradient(circle at top, #111, #050505);
+    text-align: center;
+}
+
+/* TÍTULO */
+#contato h1 {
+    font-size: 2.8rem;
+    margin-bottom: 50px;
+    background: linear-gradient(90deg, #00c2ff, #00ffae);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 1px;
+}
+
+/* CARD DO FORM */
+form {
+    max-width: 520px;
+    margin: auto;
+    padding: 40px;
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 
+        0 0 40px rgba(0, 255, 174, 0.08),
+        0 0 80px rgba(0, 194, 255, 0.05);
+}
+
+/* INPUT BOX */
+.input-box {
+    position: relative;
+    margin-bottom: 35px;
+}
+
+/* INPUTS */
+.input-box input,
+.input-box textarea {
+    width: 100%;
+    padding: 14px;
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 10px;
+    color: #fff;
+    outline: none;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+/* EFEITO HOVER/FOCUS */
+.input-box input:focus,
+.input-box textarea:focus {
+    border-color: #00ffae;
+    box-shadow: 0 0 10px rgba(0,255,174,0.3);
+}
+
+/* LABEL */
+.input-box label {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    color: #888;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+/* LABEL ANIMADA */
+.input-box input:focus ~ label,
+.input-box input:valid ~ label,
+.input-box textarea:focus ~ label,
+.input-box textarea:valid ~ label {
+    top: -10px;
+    left: 12px;
+    font-size: 0.75rem;
+    color: #00ffae;
+    background: #050505;
+    padding: 0 6px;
+}
+
+/* TEXTAREA */
+textarea {
+    min-height: 120px;
+    resize: none;
+}
+
+/* BOTÃO */
+button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    color: #000;
+
+    background: linear-gradient(90deg, #00c2ff, #00ffae);
+
+    transition: 0.4s;
+    box-shadow: 0 0 20px rgba(0,255,174,0.3);
+}
+
+/* HOVER DO BOTÃO */
+button:hover {
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 
+        0 0 25px rgba(0,255,174,0.6),
+        0 0 50px rgba(0,194,255,0.3);
+}
+
+/* CLIQUE */
+button:active {
+    transform: scale(0.98);
+}
+
+/* STATUS */
+#status {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #00ffae;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+/* APARECER STATUS */
+#status.show {
+    opacity: 1;
+}
+/* ========================= FOOTER ========================= */
+footer {
+    background: linear-gradient(180deg, #0c0c0c, #080808);
+    padding: 25px 20px;
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+footer p {
+    color: #aaa;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+}
+
+/* LINK */
+footer a {
+    color: #00c2ff;
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    transition: 0.3s;
+}
+
+/* EFEITO LINHA ANIMADA */
+footer a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: -3px;
+    background: linear-gradient(90deg, #00c2ff, #00ffae);
+    transition: 0.3s;
+}
+
+/* HOVER */
+footer a:hover {
+    color: #00ffae;
+}
+
+footer a:hover::after {
+    width: 100%;
+}
+
+/* RESPONSIVO */
+@media (max-width: 600px) {
+    footer p {
+        font-size: 0.85rem;
+    }
+}

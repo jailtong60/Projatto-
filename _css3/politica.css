@@ -1,0 +1,74 @@
+/* CONTAINER */
+.politica-container {
+    max-width: 800px;
+    margin: 120px auto 50px;
+    padding: 50px;
+    background: rgba(255,255,255,0.03);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+}
+
+/* TÍTULOS */
+.politica-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.politica-container h2 {
+    margin-top: 30px;
+    color: #00d4ff;
+}
+
+/* TEXTO */
+.politica-container p,
+.politica-container li {
+    color: #cbd5e1;
+    line-height: 2.0;
+    margin-top: 50px;
+}
+
+/* LISTA */
+.politica-container ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+/* BOTÃO */
+.btn-voltar {
+    display: inline-block;
+    margin-top: 40px;
+    padding: 12px 20px;
+    background: linear-gradient(45deg, #00d4ff, #22c55e);
+    color: #000;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-voltar:hover {
+    transform: scale(1.05);
+}
+
+/* ANIMAÇÃO */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    .politica-container {
+        padding: 20px;
+    }
+
+    nav {
+        display: none;
+    }
+}

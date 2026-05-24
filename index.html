@@ -2,51 +2,128 @@
 <html lang="pt-br">
 
 <head>
+    <!-- Meta Tags Essenciais -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Projatto - Especialista em jateamento industrial, automotivo e metalúrgico. Limpeza e preparação de superfícies com tecnologia de ponta em Flores da Cunha, RS.">
+    <meta name="keywords" content="jateamento, limpeza industrial, preparação de superfícies, jato de granalha, serviços industriais, Flores da Cunha, RS">
+    <meta name="author" content="Projatto Soluções em Jateamento">
+    <meta name="theme-color" content="#0f0f0f">
+    
+    <!-- Open Graph para Redes Sociais -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Projatto - Soluções em Jateamento Industrial">
+    <meta property="og:description" content="Especialista em jateamento e limpeza industrial com mais de 10 anos de experiência.">
+    <meta property="og:url" content="https://www.projatto.com.br">
+    <meta property="og:locale" content="pt_BR">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Projatto - Soluções em Jateamento">
+    
+    <!-- Preload Recursos Críticos -->
+    <link rel="preload" href="_css3/style.css" as="style">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.projatto.com.br">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="_imagens/projattoLogo.svg">
+    <link rel="apple-touch-icon" href="_imagens/projattoLogo.svg">
+    
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="_css3/style.css">
-    <title>Projatto</title>
+    
+    <!-- Title -->
+    <title>Projatto | Jateamento Industrial e Limpeza de Superfícies</title>
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Projatto Soluções em Jateamento",
+      "image": "https://www.projatto.com.br/_imagens/projattoLogo.svg",
+      "description": "Especialista em jateamento industrial, automotivo e metalúrgico",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Flores da Cunha",
+        "addressLocality": "Flores da Cunha",
+        "addressRegion": "RS",
+        "postalCode": "95156-000",
+        "addressCountry": "BR"
+      },
+      "telephone": "(54) 99990-6388",
+      "email": "contato@projatto.srv.br",
+      "url": "https://www.projatto.com.br",
+      "sameAs": [
+        "https://www.facebook.com/projatto",
+        "https://www.instagram.com/projattoind",
+      ],
+      "priceRange": "$$",
+      "areaServed": ["RS", "BR"],
+      "knowsAbout": ["Jateamento Industrial", "Limpeza de Superfícies", "Preparação para Pintura"],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "ratingCount": "127"
+      }
+    }
+    </script>
 </head>
 
 <body>
 
-    <header>
+    <!-- SKIP TO CONTENT -->
+    <a href="#main-content" class="skip-link">Pular para conteúdo principal</a>
+
+    <!-- HEADER SEMÂNTICO -->
+    <header role="banner" aria-label="Cabeçalho do site">
         <div class="cabeca">
 
             <div class="logo">
-                <img src="_imagens/projattoLogo.svg" alt="Logo da Projatto">
+                <a href="#inicio" title="Voltar ao início">
+                    <img src="_imagens/projattoLogo.svg" alt="Projatto - Soluções em Jateamento" loading="eager" width="55" height="55">
+                </a>
             </div>
 
-            <nav class="menu">
-                <a href="#inicio">Início</a>
-                <a href="#empresa">Empresa</a>
-                <a href="#servicos">Serviços</a>
-                <a href="#processo">Nosso processo</a>
-                <a href="#blog">Blog</a>
-                <a href="#contato">Fale conosco</a>
+            <nav class="menu" role="navigation" aria-label="Menu principal">
+                <a href="#inicio" title="Seção Início">Início</a>
+                <a href="#empresa" title="Sobre a Empresa">Empresa</a>
+                <a href="#servicos" title="Nossos Serviços">Serviços</a>
+                <a href="#processo" title="Nosso Processo">Nosso processo</a>
+                <a href="blog.html" title="Blog">Blog</a>
+                <a href="#contato" title="Formulário de Contato">Fale conosco</a>
             </nav>
 
             <div class="iso">
-                <img src="_imagens/iso.svg" alt="Selo ISO">
+                <img src="_imagens/iso.svg" alt="Certificação ISO 9001" loading="eager" width="68" height="68">
             </div>
 
         </div>
     </header>
 
-    <main>
-        <article>
+    <!-- MAIN -->
+    <main role="main" id="main-content">
+        <article role="document" itemscope itemtype="https://schema.org/LocalBusiness">
 
-            <!-- INÍCIO -->
-            <section id="inicio" class="inicio">
+            <!-- SEÇÃO INÍCIO -->
+            <section id="inicio" class="inicio" aria-label="Seção de boas-vindas">
 
                 <div class="conteudo">
 
-                    <h1>
+                    <h1 itemprop="name">
                         A Projatto é especializada<br>
                         em jateamento
                     </h1>
 
-                    <p class="subtitulo">
+                    <p class="subtitulo" itemprop="description">
                         Removemos ferrugem, tinta e qualquer tipo de resíduo com eficiência e precisão.
                     </p>
 
@@ -55,197 +132,216 @@
                         preparadas e com excelente acabamento para pintura ou outros tratamentos.
                     </p>
 
-                    <div class="beneficios">
-                        <span>✔ Alta durabilidade</span>
-                        <span>✔ Acabamento uniforme</span>
-                        <span>✔ Processo eficiente</span>
-                    </div>
+                    <ul class="beneficios" role="list">
+                        <li role="listitem">✔ Alta durabilidade</li>
+                        <li role="listitem">✔ Acabamento uniforme</li>
+                        <li role="listitem">✔ Processo eficiente</li>
+                    </ul>
 
-                    <a href="#servicos" class="btn">Conheça nossos serviços</a>
+                    <a href="#servicos" class="btn" title="Ver nossos serviços">Conheça nossos serviços</a>
 
                 </div>
 
             </section>
 
-            <!-- Galeria -->
-
-            <section class="galeria-lightbox">
+            <!-- GALERIA PREMIUM -->
+            <section class="galeria-lightbox" aria-label="Galeria de trabalhos">
                 <div class="sticky">
-                    <div class="track">
+                    <div class="track" role="region" aria-label="Galeria horizontal de imagens">
 
-                        <div class="item"><img src="_imagens/imagen (3).png"></div>
-                        <div class="item"><img src="_imagens/image2.svg"></div>
-                        <div class="item"><img src="_imagens/image3.svg"></div>
-                        <div class="item"><img src="_imagens/image4.svg"></div>
-                        <div class="item"><img src="_imagens/image5.svg"></div>
-                        <div class="item"><img src="_imagens/image6.svg"></div>
-                        <div class="item"><img src="_imagens/image7.svg"></div>
-                        <div class="item"><img src="_imagens/image8.svg"></div>
-                        <div class="item"><img src="_imagens/image9.svg"></div>
-                        <div class="item"><img src="_imagens/image10.svg"></div>
+                        <div class="item" role="img" aria-label="Projeto 1"><img src="_imagens/imagen (3).png" alt="Trabalho realizado 1" loading="lazy" width="280" height="200"></div>
+                        <div class="item" role="img" aria-label="Projeto 2"><img src="_imagens/image2.svg" alt="Trabalho realizado 2" loading="lazy" width="280" height="200"></div>
+                        <div class="item" role="img" aria-label="Projeto 3"><img src="_imagens/image3.svg" alt="Trabalho realizado 3" loading="lazy" width="280" height="200"></div>
+                        <div class="item" role="img" aria-label="Projeto 4"><img src="_imagens/image4.svg" alt="Trabalho realizado 4" loading="lazy" width="280" height="200"></div>
+                        <div class="item" role="img" aria-label="Projeto 5"><img src="_imagens/image5.svg" alt="Trabalho realizado 5" loading="lazy" width="280" height="200"></div>
+                        <div class="item" role="img" aria-label="Projeto 6"><img src="_imagens/image6.svg" alt="Trabalho realizado 6" loading="lazy" width="280" height="200"></div>
+                        <div class="item" role="img" aria-label="Projeto 7"><img src="_imagens/image7.svg" alt="Trabalho realizado 7" loading="lazy" width="280" height="200"></div>
+                        <div class="item" role="img" aria-label="Projeto 8"><img src="_imagens/image8.svg" alt="Trabalho realizado 8" loading="lazy" width="280" height="200"></div>
+                        <div class="item" role="img" aria-label="Projeto 9"><img src="_imagens/image9.svg" alt="Trabalho realizado 9" loading="lazy" width="280" height="200"></div>
+                        <div class="item" role="img" aria-label="Projeto 10"><img src="_imagens/image10.svg" alt="Trabalho realizado 10" loading="lazy" width="280" height="200"></div>
 
                     </div>
                 </div>
             </section>
 
-            </section>
-
-            <!-- FULLSCREEN -->
-            <div id="lightbox">
-                <span id="fechar">&times;</span>
-                <img id="img-grande">
+            <!-- FULLSCREEN MODAL ACESSÍVEL -->
+            <div id="lightbox" role="dialog" aria-modal="true" aria-label="Galeria em tela cheia" hidden>
+                <button id="fechar" aria-label="Fechar galeria" type="button" tabindex="0">&times;</button>
+                <img id="img-grande" alt="Imagem ampliada">
             </div>
 
-            <!-- EMPRESA -->
-            <section id="empresa">
+            <!-- SEÇÃO EMPRESA -->
+            <section id="empresa" aria-label="Sobre a empresa">
 
-                <div id="caixa1" class="box">
-                    <h1>Nossa História</h1>
+                <div class="empresa-wrapper">
 
-                    <p>
-                        A Projatto nasceu em Flores da Cunha/RS, em meio a um cenário industrial que crescia rapidamente
-                        na região.
-                        No início, tudo era simples: uma pequena estrutura, poucos equipamentos e uma grande vontade de
-                        fazer diferente no mercado de jateamento.
-                    </p>
+                    <div id="caixa1" class="box">
+                        <div class="box-badge">Nossa Trajetória</div>
+                        <h2>Nossa História</h2>
 
-                    <p>
-                        Com o tempo, a dedicação dos fundadores e o compromisso com a qualidade transformaram a empresa.
-                        Cada serviço realizado virou uma oportunidade de aprendizado, e cada cliente atendido ajudou a
-                        construir a reputação da Projatto como referência em limpeza e preparação de superfícies.
-                    </p>
+                        <p>
+                            A <strong>Projatto</strong> nasceu em Flores da Cunha/RS, em meio a um cenário industrial que crescia rapidamente
+                            na região.
+                            No início, tudo era simples: uma pequena estrutura, poucos equipamentos e uma grande vontade de
+                            fazer diferente no mercado de jateamento.
+                        </p>
 
-                    <p>
-                        Foram anos de investimento em tecnologia, capacitação de profissionais e melhoria constante dos
-                        processos.
-                        A busca por excelência levou a empresa a adotar padrões rigorosos de qualidade e a conquistar a
-                        confiança de indústrias, oficinas e parceiros da região.
-                    </p>
+                        <p>
+                            Com o tempo, a dedicação dos fundadores e o compromisso com a qualidade transformaram a empresa.
+                            Cada serviço realizado virou uma oportunidade de aprendizado, e cada cliente atendido ajudou a
+                            construir a reputação da Projatto como referência em limpeza e preparação de superfícies.
+                        </p>
 
-                    <p>
-                        Hoje, localizada em Flores da Cunha/RS, a Projatto atua há mais de 10 anos no mercado, reunindo
-                        profissionais qualificados e experientes.
-                        Mais do que uma prestadora de serviços, a empresa se tornou sinônimo de confiança, precisão e
-                        acabamento de alto nível no setor de jateamento.
-                    </p>
-                </div>
+                        <p>
+                            Foram anos de investimento em tecnologia, capacitação de profissionais e melhoria constante dos
+                            processos.
+                            A busca por excelência levou a empresa a adotar <strong>padrões rigorosos de qualidade</strong> e a conquistar a
+                            confiança de indústrias, oficinas e parceiros da região.
+                        </p>
 
-                <div id="caixa2" class="box">
-                    <h2>Certificação</h2>
-                    <p>Gestão certificada pela ISO 9001.</p>
+                        <p>
+                            Hoje, a Projatto atua há <strong>mais de 10 anos</strong> no mercado, reunindo
+                            profissionais qualificados e experientes.
+                            Mais do que uma prestadora de serviços, a empresa se tornou sinônimo de <strong>confiança, precisão e
+                            acabamento de alto nível</strong> no setor de jateamento.
+                        </p>
 
-                    <img src="_imagens/certificado.svg" alt="Selo ISO 9001">
+                        <div class="empresa-stats">
+                            <div class="stat-item">
+                                <span class="stat-num">10+</span>
+                                <span class="stat-label">Anos de mercado</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-num">500+</span>
+                                <span class="stat-label">Clientes atendidos</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-num">4.9★</span>
+                                <span class="stat-label">Avaliação média</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="caixa2" class="box">
+                        <div class="box-badge">Certificação</div>
+                        <h2>Certificação e Qualidade</h2>
+                        <p><strong>Gestão certificada pela ISO 9001.</strong></p>
+                        <p>Garantimos os mais altos padrões de qualidade em todos os nossos processos, desde o atendimento inicial até a entrega do serviço finalizado.</p>
+
+                        <img src="_imagens/certificado.svg" alt="Certificação ISO 9001" loading="lazy" itemprop="image" width="320" height="320">
+                    </div>
+
                 </div>
 
             </section>
 
-            <!-- SERVIÇOS -->
-            <section id="servicos">
-                <h1>Nossos serviços</h1>
+            <!-- SEÇÃO SERVIÇOS -->
+            <section id="servicos" aria-label="Serviços oferecidos">
+                <h2>Nossos Serviços</h2>
 
                 <div class="container">
 
                     <!-- JATEAMENTOS -->
-                    <div class="item">
-                        <h2>Jateamentos</h2>
-                        <p class="resumo">Granalha de aço e microesfera.</p>
+                    <article class="item" itemscope itemtype="https://schema.org/Service">
+                        <h3 itemprop="name">Jateamentos</h3>
+                        <p class="resumo" itemprop="description">Granalha de aço e microesfera.</p>
 
                         <p>
                             O jateamento é um processo industrial utilizado para limpar, preparar
                             ou dar acabamento a superfícies através do impacto de partículas abrasivas.
                         </p>
 
-                        <ul>
-                            <li>Remoção de ferrugem pesada</li>
-                            <li>Limpeza de superfícies metálicas</li>
-                            <li>Preparação para pintura e solda</li>
+                        <ul role="list">
+                            <li role="listitem">Remoção de ferrugem pesada</li>
+                            <li role="listitem">Limpeza de superfícies metálicas</li>
+                            <li role="listitem">Preparação para pintura e solda</li>
                         </ul>
 
                         <strong>Resultado:</strong>
                         <p>Superfície uniforme com excelente aderência.</p>
-                    </div>
+                    </article>
 
                     <!-- SEGMENTOS -->
-                    <div class="item">
-                        <h2>Segmentos</h2>
+                    <article class="item">
+                        <h3>Segmentos de Mercado</h3>
                         <p class="resumo">Automotivo, metalúrgico e industrial.</p>
 
-                        <h3>🚗 Automotivo</h3>
-                        <ul>
-                            <li>Remoção de ferrugem e tinta</li>
-                            <li>Preparação para pintura</li>
-                            <li>Limpeza de peças e chassis</li>
+                        <h4>🚗 Automotivo</h4>
+                        <ul role="list">
+                            <li role="listitem">Remoção de ferrugem e tinta</li>
+                            <li role="listitem">Preparação para pintura</li>
+                            <li role="listitem">Limpeza de peças e chassis</li>
                         </ul>
 
-                        <h3>⚙️ Metalúrgico</h3>
-                        <ul>
-                            <li>Limpeza de peças novas</li>
-                            <li>Remoção de rebarbas</li>
-                            <li>Preparação para processos industriais</li>
+                        <h4>⚙️ Metalúrgico</h4>
+                        <ul role="list">
+                            <li role="listitem">Limpeza de peças novas</li>
+                            <li role="listitem">Remoção de rebarbas</li>
+                            <li role="listitem">Preparação para processos industriais</li>
                         </ul>
 
-                        <h3>🏭 Industrial</h3>
-                        <ul>
-                            <li>Limpeza de estruturas e máquinas</li>
-                            <li>Manutenção contra corrosão</li>
-                            <li>Preparação para pintura industrial</li>
+                        <h4>🏭 Industrial</h4>
+                        <ul role="list">
+                            <li role="listitem">Limpeza de estruturas e máquinas</li>
+                            <li role="listitem">Manutenção contra corrosão</li>
+                            <li role="listitem">Preparação para pintura industrial</li>
                         </ul>
-                    </div>
+                    </article>
 
                     <!-- EQUIPAMENTOS -->
-                    <div class="item">
-                        <h2>Equipamentos</h2>
-                        <p class="resumo">Jato automático e manual.</p>
+                    <article class="item">
+                        <h3>Equipamentos de Qualidade</h3>
+                        <p class="resumo">Jato automático e manual de última geração.</p>
 
-                        <h3>⚙️ Jato automático</h3>
-                        <ul>
-                            <li>Alta produtividade</li>
-                            <li>Padrão uniforme</li>
-                            <li>Processo contínuo</li>
+                        <h4>⚙️ Jato Automático</h4>
+                        <ul role="list">
+                            <li role="listitem">Alta produtividade</li>
+                            <li role="listitem">Padrão uniforme</li>
+                            <li role="listitem">Processo contínuo</li>
                         </ul>
 
-                        <h3>🛠️ Jato manual</h3>
-                        <ul>
-                            <li>Maior precisão</li>
-                            <li>Controle detalhado</li>
-                            <li>Ideal para peças específicas</li>
+                        <h4>🛠️ Jato Manual</h4>
+                        <ul role="list">
+                            <li role="listitem">Maior precisão</li>
+                            <li role="listitem">Controle detalhado</li>
+                            <li role="listitem">Ideal para peças específicas</li>
                         </ul>
-                    </div>
+                    </article>
 
                     <!-- ATENDIMENTO -->
-                    <div class="item">
-                        <h2>Atendimento</h2>
+                    <article class="item">
+                        <h3>Atendimento Personalizado</h3>
                         <p class="resumo">Atendimento direto com o cliente.</p>
 
                         <p>
                             Nosso atendimento é focado na proximidade, garantindo acompanhamento
-                            completo e soluções personalizadas.
+                            completo e soluções personalizadas para cada projeto.
                         </p>
 
-                        <ul>
-                            <li>Entendimento das necessidades</li>
-                            <li>Comunicação clara</li>
-                            <li>Acompanhamento do processo</li>
-                            <li>Ajustes em tempo real</li>
+                        <ul role="list">
+                            <li role="listitem">Entendimento profundo das necessidades</li>
+                            <li role="listitem">Comunicação clara e transparente</li>
+                            <li role="listitem">Acompanhamento integral do processo</li>
+                            <li role="listitem">Ajustes em tempo real conforme necessário</li>
                         </ul>
 
                         <strong>Resultado:</strong>
-                        <p>Mais confiança e melhor qualidade no serviço.</p>
-                    </div>
+                        <p>Mais confiança e qualidade superior no serviço entregue.</p>
+                    </article>
 
                 </div>
             </section>
 
-            <!-- PROCESSO -->
-            <section id="processo">
-                <h1>Nosso Processo</h1>
+            <!-- SEÇÃO PROCESSO -->
+            <section id="processo" aria-label="Nosso processo de trabalho">
+                <h2>Nosso Processo</h2>
 
                 <div class="processo">
 
-                    <div class="etapa">
-                        <h3>01</h3>
-                        <h2>Preparação</h2>
-                        <h4>Análise e descontaminação</h4>
+                    <article class="etapa">
+                        <h3 aria-label="Etapa um">01</h3>
+                        <h4>Preparação</h4>
+                        <h5>Análise e descontaminação</h5>
 
                         <p>
                             Antes de iniciar o serviço, realizamos uma análise completa da superfície,
@@ -257,12 +353,12 @@
                             que possam comprometer o resultado. Essa etapa garante melhor aderência,
                             uniformidade e maior durabilidade do tratamento.
                         </p>
-                    </div>
+                    </article>
 
-                    <div class="etapa">
-                        <h3>02</h3>
-                        <h2>Jateamento</h2>
-                        <h4>Execução com controle de qualidade</h4>
+                    <article class="etapa">
+                        <h3 aria-label="Etapa dois">02</h3>
+                        <h4>Jateamento</h4>
+                        <h5>Execução com controle de qualidade</h5>
 
                         <p>
                             O jateamento é realizado com equipamentos e abrasivos adequados para cada
@@ -275,12 +371,12 @@
                             garantindo um acabamento uniforme e o perfil ideal para pintura ou outros
                             tratamentos.
                         </p>
-                    </div>
+                    </article>
 
-                    <div class="etapa">
-                        <h3>03</h3>
-                        <h2>Inspeção</h2>
-                        <h4>Verificação final antes da entrega</h4>
+                    <article class="etapa">
+                        <h3 aria-label="Etapa três">03</h3>
+                        <h4>Inspeção</h4>
+                        <h5>Verificação final antes da entrega</h5>
 
                         <p>
                             Após a execução, realizamos uma inspeção detalhada para garantir que a
@@ -291,80 +387,114 @@
                             Verificamos acabamento, limpeza e possíveis ajustes, assegurando um resultado
                             final durável, seguro e pronto para aplicação ou entrega ao cliente.
                         </p>
-                    </div>
+                    </article>
 
                 </div>
             </section>
-            <section id="blog">
-                <h1>Blog</h1>
+
+           <!-- SEÇÃO BLOG -->
+            <section id="blog" aria-label="Blog e artigos">
+                <h2>Blog</h2>
 
                 <div class="blog-container">
 
-                    <article class="post">
-                        <img src="_imagens/projattoLogo.svg" alt="Post 1">
-                        <h2>Como funciona o jateamento abrasivo?</h2>
-                        <p>
-                            Entenda o processo, os tipos de materiais utilizados e como o jateamento
-                            pode aumentar a durabilidade das superfícies.
-                        </p>
-                        <a href="#servicos">Ler mais</a>
+                    <article class="post" itemscope itemtype="https://schema.org/BlogPosting">
+                        <div class="post-image" style="background: linear-gradient(135deg, rgba(0, 194, 255, 0.2), rgba(0, 255, 174, 0.1));">
+                            <img src="_imagens/blog-jateamento.svg" alt="Artigo: Como funciona o jateamento abrasivo" loading="lazy" width="300" height="260">
+                        </div>
+                        <div class="post-content">
+                            <h3 itemprop="headline">⚙️ Como funciona o jateamento?</h3>
+                            <p itemprop="description">
+                                Entenda o processo, os tipos de materiais utilizados e como o jateamento
+                                pode aumentar a durabilidade das superfícies.
+                            </p>
+                            <div class="post-meta">
+                                <span>📖 Educação</span>
+                                <span>⏱️ 5 min</span>
+                            </div>
+                            <a href="blog.html#como-funciona" title="Ler artigo completo">Ler Artigo</a>
+                        </div>
                     </article>
 
-                    <article class="post">
-                        <img src="_imagens/projattoLogo.svg" alt="Post 2">
-                        <h2>Quando é necessário fazer a limpeza industrial?</h2>
-                        <p>
-                            Saiba identificar os sinais de desgaste e a importância da manutenção
-                            preventiva em estruturas metálicas.
-                        </p>
-                        <a href="#processo">Ler mais</a>
+                    <article class="post" itemscope itemtype="https://schema.org/BlogPosting">
+                        <div class="post-image" style="background: linear-gradient(135deg, rgba(0, 255, 174, 0.2), rgba(0, 194, 255, 0.1));">
+                            <img src="_imagens/blog-manutencao.svg" alt="Artigo: Quando é necessário fazer a limpeza industrial" loading="lazy" width="300" height="260">
+                        </div>
+                        <div class="post-content">
+                            <h3 itemprop="headline">🔧 Quando fazer limpeza industrial?</h3>
+                            <p itemprop="description">
+                                Saiba identificar os sinais de desgaste e a importância da manutenção
+                                preventiva em estruturas metálicas.
+                            </p>
+                            <div class="post-meta">
+                                <span>🛠️ Manutenção</span>
+                                <span>⏱️ 4 min</span>
+                            </div>
+                            <a href="blog.html#quando-limpar" title="Ler artigo completo">Ler Artigo</a>
+                        </div>
                     </article>
 
-                    <article class="post">
-                        <img src="_imagens/projattoLogo.svg" alt="Post 3">
-                        <h2>Benefícios do jateamento antes da pintura</h2>
-                        <p>
-                            Descubra como preparar corretamente a superfície pode garantir um
-                            acabamento mais resistente e durável.
-                        </p>
-                        <a href="#inicio">Ler mais</a>
+                    <article class="post" itemscope itemtype="https://schema.org/BlogPosting">
+                        <div class="post-image" style="background: linear-gradient(135deg, rgba(255, 152, 0, 0.15), rgba(0, 194, 255, 0.1));">
+                            <img src="_imagens/blog-pintura.svg" alt="Artigo: Benefícios do jateamento antes da pintura" loading="lazy" width="300" height="260">
+                        </div>
+                        <div class="post-content">
+                            <h3 itemprop="headline">🎨 Benefícios antes da pintura</h3>
+                            <p itemprop="description">
+                                Descubra como preparar corretamente a superfície pode garantir um
+                                acabamento mais resistente e durável.
+                            </p>
+                            <div class="post-meta">
+                                <span>🖌️ Pintura</span>
+                                <span>⏱️ 6 min</span>
+                            </div>
+                            <a href="blog.html#beneficios-pintura" title="Ler artigo completo">Ler Artigo</a>
+                        </div>
                     </article>
 
                 </div>
+
+                <div style="text-align:center; margin-top: 48px;">
+                    <a href="blog.html" class="btn" title="Ver todos os artigos do blog">Ver todos os artigos →</a>
+                </div>
+
             </section>
-            <section id="contato">
-                <h1>Fale Conosco</h1>
+            <!-- SEÇÃO CONTATO -->
+            <section id="contato" aria-label="Formulário de contato">
+                <h2>Fale Conosco</h2>
 
-                <form id="formContato">
+                <form id="formContato" name="contato" novalidate autocomplete="on" aria-describedby="form-help">
+                    <p id="form-help" class="sr-only">Preencha os campos abaixo para entrar em contato conosco.</p>
+
                     <div class="input-box">
-                        <input type="text" id="nome" required>
-                        <label>Seu nome</label>
+                        <input type="text" id="nome" name="nome" required aria-required="true" autocomplete="name" inputmode="text">
+                        <label for="nome">Seu nome</label>
                     </div>
 
                     <div class="input-box">
-                        <input type="email" id="email" required>
-                        <label>Seu e-mail</label>
+                        <input type="email" id="email" name="email" required aria-required="true" autocomplete="email" inputmode="email">
+                        <label for="email">Seu e-mail</label>
                     </div>
 
                     <div class="input-box">
-                        <textarea id="mensagem" required></textarea>
-                        <label>Sua mensagem</label>
+                        <textarea id="mensagem" name="mensagem" required aria-required="true" autocomplete="off" inputmode="text" rows="6"></textarea>
+                        <label for="mensagem">Sua mensagem</label>
                     </div>
 
-                    <button type="submit">Enviar Mensagem</button>
+                    <button type="submit" aria-label="Enviar formulário de contato">Enviar Mensagem</button>
                 </form>
 
-                <p id="status"></p>
+                <p id="status" role="alert" aria-live="polite" aria-atomic="true"></p>
             </section>
 
-            <!-- LOCALIZAÇÃO -->
-            <section id="localizacao">
+            <!-- SEÇÃO LOCALIZAÇÃO -->
+            <section id="localizacao" aria-label="Localização e contato">
 
                 <div class="local-box">
 
                     <div class="info-local">
 
-                        <h1>Nossa Localização</h1>
+                        <h2>Nossa Localização</h2>
 
                         <p>
                             A Projatto está localizada em Flores da Cunha/RS,
@@ -376,32 +506,35 @@
 
                             <div class="local-item">
                                 <h3>📍 Endereço</h3>
-                                <p>Flores da Cunha - RS</p>
+                                <p itemprop="address">Cidade:Flores da Cunha - RS</p>
+                                <p itemprop="address">Rua:Estrada Gerardo Santin Guarese N°1930</p>
+                                
                             </div>
 
                             <div class="local-item">
                                 <h3>📞 Telefone</h3>
-                                <p>(54) 99999-9999</p>
+                                <p><a href="tel:+5554999906388" itemprop="telephone">(54) 99990-6388</a></p>
                             </div>
 
                             <div class="local-item">
                                 <h3>✉️ E-mail</h3>
-                                <p>contato@projatto.com.br</p>
+                                <p><a href="mailto:contato@projatto.srv.br" itemprop="email">contato@projatto.srv.br</a></p>
                             </div>
 
                             <div class="local-item">
                                 <h3>🕒 Atendimento</h3>
-                                <p>Segunda à Sexta • 07:30 às 17:00</p>
+                                <p><time itemprop="openingHoursSpecification">Segunda à Sexta • 07:30 às 12:00 e 13:30 às 17:00</time></p>
                             </div>
 
                         </div>
 
                     </div>
 
-                    <!-- MAPA -->
+                    <!-- MAPA GOOGLE -->
                     <div class="mapa">
 
                         <iframe
+                            title="Localização da Projatto em Flores da Cunha, RS - Mapa Interativo"
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8823.15765614857!2d-51.19160240159807!3d-29.00864875799773!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951e9a89bbc4268b%3A0xa4d81a20e4b55b4f!2sProjatto%20Solu%C3%A7%C3%B5es%20em%20Jateamento!5e1!3m2!1spt-BR!2sbr!4v1778351254739!5m2!1spt-BR!2sbr"
                             width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -414,12 +547,48 @@
         </article>
     </main>
 
-    <footer>
+    <!-- FOOTER SEMÂNTICO -->
+    <footer role="contentinfo">
         <p>
-            Projatto © 2026 |
-            <a href="politica.html">Política de Privacidade</a>
+            <strong>&copy; 2026 Projatto Soluções em Jateamento.</strong> Todos os direitos reservados.
+            <span aria-label="separador">|</span>
+            <a href="politica.html" title="Leia nossa política de privacidade">Política de Privacidade</a>
+            <span aria-label="separador">|</span>
+            <a href="#contato" title="Voltar ao formulário de contato">Contate-nos</a>
         </p>
     </footer>
+
+    <!-- MENU FLUTUANTE REDES SOCIAIS -->
+    <div class="social-float" role="navigation" aria-label="Redes sociais">
+
+        <a href="https://www.instagram.com/projattoind" target="_blank" rel="noopener noreferrer"
+           class="social-btn social-instagram" title="Siga-nos no Instagram" aria-label="Instagram da Projatto">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+            </svg>
+            <span class="social-label">Instagram</span>
+        </a>
+
+        <a href="https://www.facebook.com/projatto" target="_blank" rel="noopener noreferrer"
+           class="social-btn social-facebook" title="Curta nossa página no Facebook" aria-label="Facebook da Projatto">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+            <span class="social-label">Facebook</span>
+        </a>
+
+        <a href="https://wa.me/5554999906388" target="_blank" rel="noopener noreferrer"
+           class="social-btn social-whatsapp" title="Fale conosco pelo WhatsApp" aria-label="WhatsApp da Projatto">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            <span class="social-label">WhatsApp</span>
+        </a>
+
+    </div>
+
+    <!-- Scripts -->
+    <script defer src="app.js"></script>
 
 </body>
 

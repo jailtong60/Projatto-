@@ -84,7 +84,7 @@
     /* Typography */
     --font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
     --font-display: 'Syne', 'Segoe UI', sans-serif;
-    --font-size-base: 16px;
+    --font-size-base: 12px;
     --line-height-base: 1.7;
     
     /* Borders */
@@ -185,7 +185,7 @@ header.scrolled {
 }
 
 .iso img {
-    height: 68px;
+    height: 50px;
     width: auto;
     opacity: 0.9;
     transition: all var(--trans-base);
@@ -2305,137 +2305,5 @@ footer a:hover::after {
 @media (prefers-reduced-motion: no-preference) {
     html {
         scroll-behavior: smooth;
-    }
-}
-
-/* ========================= FLOATING SOCIAL MENU ========================= */
-.social-float {
-    position: fixed;
-    right: 24px;
-    bottom: 40px;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    z-index: 900;
-}
-
-.social-btn {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 13px 16px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-family: var(--font-family);
-    font-size: 13.5px;
-    font-weight: 600;
-    letter-spacing: 0.3px;
-    color: #fff;
-    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.45);
-    transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
-    overflow: hidden;
-    white-space: nowrap;
-    max-width: 52px; /* ícone apenas */
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    position: relative;
-}
-
-/* Label oculta por padrão, expande no hover */
-.social-label {
-    opacity: 0;
-    max-width: 0;
-    overflow: hidden;
-    transition: opacity 0.25s ease, max-width 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-    pointer-events: none;
-}
-
-.social-btn:hover {
-    max-width: 180px;
-    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.55);
-    transform: translateX(-4px) scale(1.04);
-}
-
-.social-btn:hover .social-label {
-    opacity: 1;
-    max-width: 120px;
-}
-
-/* Instagram */
-.social-instagram {
-    background: linear-gradient(135deg, #833ab4 0%, #fd1d1d 50%, #fcb045 100%);
-}
-
-.social-instagram:hover {
-    box-shadow: 0 12px 36px rgba(253, 29, 29, 0.45), 0 0 20px rgba(252, 176, 69, 0.25);
-}
-
-/* Facebook */
-.social-facebook {
-    background: linear-gradient(135deg, #1877f2, #0a5fd6);
-}
-
-.social-facebook:hover {
-    box-shadow: 0 12px 36px rgba(24, 119, 242, 0.5), 0 0 20px rgba(24, 119, 242, 0.2);
-}
-
-/* WhatsApp */
-.social-whatsapp {
-    background: linear-gradient(135deg, #25d366, #128c3e);
-}
-
-.social-whatsapp:hover {
-    box-shadow: 0 12px 36px rgba(37, 211, 102, 0.5), 0 0 20px rgba(37, 211, 102, 0.25);
-}
-
-/* Pulse animado no WhatsApp para chamar atenção */
-.social-whatsapp::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    border-radius: 50px;
-    background: rgba(37, 211, 102, 0.4);
-    animation: pulse-social 2.5s ease-out infinite;
-    pointer-events: none;
-    z-index: -1;
-}
-
-@keyframes pulse-social {
-    0% { transform: scale(1); opacity: 0.6; }
-    70% { transform: scale(1.5); opacity: 0; }
-    100% { transform: scale(1.5); opacity: 0; }
-}
-
-/* Icone SVG */
-.social-btn svg {
-    flex-shrink: 0;
-    transition: transform 0.3s ease;
-}
-
-.social-btn:hover svg {
-    transform: rotate(-8deg) scale(1.15);
-}
-
-/* Responsivo mobile */
-@media (max-width: 600px) {
-    .social-float {
-        right: 16px;
-        bottom: 24px;
-        gap: 10px;
-    }
-
-    .social-btn {
-        padding: 11px 13px;
-        max-width: 46px;
-    }
-
-    .social-btn:hover {
-        max-width: 160px;
-        transform: translateX(-2px) scale(1.02);
-    }
-
-    .social-btn svg {
-        width: 20px;
-        height: 20px;
     }
 }
